@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
         focus-visible:outline-2
         focus-visible:outline-offset-2
       `,
-        disabled && 'cursor-default opacity-5',
+        disabled && 'cursor-default opacity-50',
         fullWidth && 'w-full',
         secondary ? 'text-gray-900' : 'text-white',
         danger &&
