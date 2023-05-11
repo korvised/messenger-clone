@@ -1,7 +1,9 @@
+import { User } from '@prisma/client'
+
 import prisma from '@/app/libs/prismadb'
 import getSession from './getSession'
 
-const getCurrentUser = async () => {
+const getCurrentUser = async (): Promise<User | null> => {
   try {
     const session = await getSession()
 

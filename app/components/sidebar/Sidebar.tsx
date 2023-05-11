@@ -2,11 +2,11 @@ import { getCurrentUser } from '@/app/actions'
 import DesktopSidebar from './DesktopSidebar'
 import MobileFooter from './MobileFooter'
 
-export default async function Sidebar({
-  children,
-}: {
+interface SidebarProps {
   children: React.ReactNode
-}) {
+}
+
+export default async function Sidebar({ children }: SidebarProps) {
   const currentUser = await getCurrentUser()
 
   return (
