@@ -6,7 +6,7 @@ import { getCurrentUser } from '@/app/actions'
 export async function POST(request: Request) {
   try {
     const currentUser = await getCurrentUser()
-    if (!currentUser || !currentUser.email) {
+    if (!currentUser || !currentUser?.email) {
       return new NextResponse('Unauthorized', { status: 401 })
     }
 
