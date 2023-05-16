@@ -1,13 +1,12 @@
 'use client'
 
-import { useMemo } from 'react'
+import clsx from 'clsx'
+import Image from 'next/image'
 import { useSession } from 'next-auth/react'
+import { format } from 'date-fns'
 
 import { FullMessageType } from '@/app/types'
-import clsx from 'clsx'
-import Avatar from '@/app/components/Avatar'
-import { format } from 'date-fns'
-import Image from 'next/image'
+import { Avatar } from '@/app/components'
 
 interface MessageBoxProps {
   data: FullMessageType
